@@ -33,7 +33,7 @@ class Experience(
     var isActive: Boolean = isActive
 
     @OneToMany(
-        targetEntity = Experience::class,
+        targetEntity = ExperienceDetail::class,
         fetch = FetchType.LAZY,
         cascade = [CascadeType.ALL]
     )
