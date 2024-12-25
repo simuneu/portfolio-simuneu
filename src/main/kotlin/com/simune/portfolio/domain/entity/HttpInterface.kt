@@ -11,9 +11,7 @@ class HttpInterface(httpServletRequest: HttpServletRequest) : BaseEntity() {
     @Column(name = "http_interface_id")
     var id: Long? = null //?은 null을 허용
 
-    var cookies: String? = httpServletRequest.cookies
-        ?.map { "${it.name}:${it.value}" }
-        ?.toString()
+    var cookies: String? = httpServletRequest.cookies?.map { "${it.name}:${it.value}" }?.toString()
 
     var referer: String? = httpServletRequest.getHeader("referer")
 
@@ -25,5 +23,5 @@ class HttpInterface(httpServletRequest: HttpServletRequest) : BaseEntity() {
 
     var requestUri: String? = httpServletRequest.requestURI
 
-    var userAgen: String? = httpServletRequest.getHeader("user-agent")
+    var userAgent: String? = httpServletRequest.getHeader("user-agent")
 }

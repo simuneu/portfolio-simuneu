@@ -4,5 +4,5 @@ import com.simune.portfolio.domain.entity.Introduction
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface IntroductionRepository : JpaRepository<Introduction, Long> {
-    fun findByIsActive(isActive: Boolean): List<Introduction>
+    fun findAllByIsActive(isActive: Boolean): List<Introduction>
 }
