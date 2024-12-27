@@ -71,7 +71,7 @@ class ExperienceRepositoryTest(
     @Test
     fun testFindAllIsActive() {
         println("findAllByIsActive  테스트 시작")
-        val experiences = experienceRepository.findByIsActive(true)
+        val experiences = experienceRepository.findAllByIsActive(true)
         assertThat(experiences).hasSize(DATA_SIZE)
         println("experiences.size: ${experiences.size}")
 
